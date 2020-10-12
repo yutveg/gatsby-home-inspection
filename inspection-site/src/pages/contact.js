@@ -4,6 +4,25 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 class ContactPage extends React.Component {
+  state = {
+    formData: {
+      firstName: "",
+      lastName: "",
+      subject: "",
+      message: "",
+    },
+    specific: false,
+  };
+
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     return (
       <Layout>
@@ -33,6 +52,7 @@ class ContactPage extends React.Component {
               id="first-name"
               placeholder="Bill"
               type="text"
+              onChange={(e) => this.handleInputChange(e)}
               required
             />
 
@@ -48,6 +68,7 @@ class ContactPage extends React.Component {
               id="last-name"
               placeholder="Murray"
               type="text"
+              onChange={(e) => this.handleInputChange(e)}
               required
             />
 
@@ -67,19 +88,24 @@ class ContactPage extends React.Component {
               <option>Other</option>
             </select>
 
-            <label
-              htmlFor="specific-reason"
-              className="block mb-2 text-xs font-bold uppercase"
-            >
-              Please specify
-            </label>
-            <input
-              className="w-full mb-6 form-input"
-              id="specific-reason"
-              placeholder="Reason"
-              type="text"
-              required
-            />
+            {this.specific && (
+              <>
+                <label
+                  htmlFor="specific-reason"
+                  className="block mb-2 text-xs font-bold uppercase"
+                >
+                  Please specify
+                </label>
+                <input
+                  className="w-full mb-6 form-input"
+                  id="specific-reason"
+                  placeholder="Reason"
+                  type="text"
+                  onChange={(e) => this.handleInputChange(e)}
+                  required
+                />
+              </>
+            )}
 
             <label
               className="block mb-2 text-xs font-bold uppercase"
@@ -93,6 +119,7 @@ class ContactPage extends React.Component {
               id="message"
               placeholder="Say something..."
               rows="8"
+              onChange={(e) => this.handleInputChange(e)}
               required
             />
 
