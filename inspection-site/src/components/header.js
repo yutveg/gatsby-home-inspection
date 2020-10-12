@@ -9,7 +9,7 @@ function Header() {
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
         <Link to="/">
           <h1 className="flex items-center text-white no-underline">
-            O&apos;Neil Home Inspections, LLC
+            O&apos;Neil Home Inspections
           </h1>
         </Link>
 

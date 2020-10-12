@@ -12,8 +12,8 @@ function IndexPage() {
         title="Home"
       />
 
-      <section className="text-center">
-        <div className="mx-auto bg-white">
+      <section className="w-full bg-hero-image p-8">
+        <div className="mx-auto text-center">
           <img
             alt="O'Neil Home Inspections Stylized Logo"
             className="block w-1/2 mx-auto mb-8"
