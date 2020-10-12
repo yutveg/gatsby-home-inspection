@@ -13,19 +13,21 @@ function IndexPage() {
       />
 
       <section className="text-center">
-        <img
-          alt="O'Neil Home Inspections Stylized Logo"
-          className="block w-1/2 mx-auto mb-8"
-          src={logo}
-        />
+        <div className="mx-auto bg-white">
+          <img
+            alt="O'Neil Home Inspections Stylized Logo"
+            className="block w-1/2 mx-auto mb-8"
+            src={logo}
+          />
 
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Over four decades of experience.
-        </h2>
+          <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
+            Over four decades of combined experience.
+          </h2>
 
-        <p className="leading-loose">
-          Ensuring you get the quality home inspection you deserve.
-        </p>
+          <p className="leading-loose">
+            Ensuring you get the quality home inspection you deserve.
+          </p>
+        </div>
       </section>
     </Layout>
   );
