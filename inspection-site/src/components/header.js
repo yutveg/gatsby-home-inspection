@@ -1,8 +1,6 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
 
-const logo = require("../images/oneil.jpg");
-
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
@@ -11,11 +9,7 @@ function Header() {
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
         <Link to="/">
           <h1 className="flex items-center text-white no-underline">
-            <img
-              className="w-16 md:w-32 lg:w-48"
-              src={logo}
-              alt="O'Neil Home Inspections"
-            />
+            O&apos;Neil Home Inspections, LLC
           </h1>
         </Link>
 
@@ -44,12 +38,12 @@ function Header() {
               title: `About`,
             },
             {
-              route: `/contact`,
-              title: `Contact`,
-            },
-            {
               route: `/radon`,
               title: `Radon`,
+            },
+            {
+              route: `/contact`,
+              title: `Contact`,
             },
           ].map((link) => (
             <Link
