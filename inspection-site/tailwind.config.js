@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: () => ({
-        "hero-image": "url('./src/images/hero.jpg')",
+        "hero-image": "./src/images/hero.jpg",
       }),
     },
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
   },
   variants: {},
   // https://github.com/tailwindcss/custom-forms
